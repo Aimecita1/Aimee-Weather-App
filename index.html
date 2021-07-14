@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Week 5 Matt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/18b976e585.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div container="row">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex" id="city-form">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Enter the name of the city"
+              aria-label="Search"
+              id="search-city"
+            />
+            <button
+              class="btn btn-outline-success"
+              id="search-button"
+              type="submit"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <button class="currentPosition" id="current-position">
+            Current Position
+          </button>
+        </div>
+      </nav>
+      <ul>
+        <li class="city" id="city"></li>
+        <li class="date" id="date">Friday, June 18</li>
+        <li class="description" id="description"></li>
+      </ul>
+      <div class="row">
+        <div class="col-6 temperature">
+          <span class="temperature-number" id="temperature"></span>
+          <span class="units"> °C </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2" id="day-1">
+          <div class="card" style="width: 10rem">
+            <i class="far fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                Saturday
+                <br />
+                87° / 76°
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2" id="day-2">
+          <div class="card" style="width: 10rem">
+            <i class="far fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                Sunday
+                <br />
+                88° / 76°
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2" id="day-3">
+          <div class="card" style="width: 10rem">
+            <i class="far fa-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                Monday
+                <br />
+                89° / 77°
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2" id="day-4">
+          <div class="card" style="width: 10rem">
+            <i class="fas fa-cloud-sun-rain"></i>
+            <div class="card-body">
+              <p class="card-text">
+                Tuesday
+                <br />
+                89° / 76°
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2" id="day-5">
+          <div class="card" style="width: 10rem">
+            <i class="fas fa-cloud-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                Wednesday
+                <br />
+                89° / 77°
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
